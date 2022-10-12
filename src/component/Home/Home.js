@@ -1,11 +1,22 @@
+// @ts-nocheck
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Topics from "../Topics/Topics";
 
 const Home = () => {
-  const shirt = useLoaderData;
+  const topic = useLoaderData();
+  const friends = topic.data;
+
   return (
-    <div>
-      <h1>This is home{shirt.length}</h1>
+    <div className=" justify-center">
+      <h1 className=" text-2xl font-bold text-center">This is home</h1>
+      <div className=" ">
+        <div className="grid md:grid-cols-4 gap-4 justify-center ">
+          {friends.map((friends) => (
+            <Topics key={friends.id} friends={friends}></Topics>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
