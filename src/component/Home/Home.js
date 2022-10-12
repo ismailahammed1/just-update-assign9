@@ -5,15 +5,15 @@ import Topics from "../Topics/Topics";
 
 const Home = () => {
   const topic = useLoaderData();
-  const friends = topic.data;
+  const quiz = topic.data;
 
   return (
     <div className=" justify-center">
       <h1 className=" text-2xl font-bold text-center">This is home</h1>
       <div className=" ">
         <div className="grid md:grid-cols-4 gap-4 justify-center ">
-          {friends.map((friends) => (
-            <Topics key={friends.id} friends={friends}></Topics>
+          {quiz.map((quiz) => (
+            <Topics key={quiz.id} quiz={quiz}></Topics>
           ))}
         </div>
       </div>

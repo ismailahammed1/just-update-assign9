@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "./component/Blog/Blog";
@@ -33,10 +34,12 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: "quizData/:id",
+        path: "/quiz/:quizId",
         element: <QuizData></QuizData>,
         loader: async ({ params }) =>
-          fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
+          fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+          ),
       },
     ],
   },
