@@ -1,0 +1,28 @@
+.mcq{
+    background-color: rgb(213, 226, 238);
+    border-radius: 20px;
+    margin: 20px;
+    height: auto;
+    padding: 20px;
+    
+}
+.option{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    word-wrap: break-word;
+    gap: 10px;
+    
+}
+.question{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.icon{
+    padding: 2px 10px;
+    border-radius: 18px;
+}
+.icon:hover{
+    background-color: rgb(145, 173, 246);
+}
